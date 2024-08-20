@@ -3,14 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/Candado.jpeg" />
 		<title>Encriptador de texto</title>
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
 		<header class="header">
-			<h1 class="header__titulo">Encriptador de texto</h1>
-			<a href="www.aluracursos.com"
-				><img src="" alt="Una a minuscula, el logo de Alura"
+			<a href="www.aluracursos.com" target="_blank"
+				><img src="./assets/Logo.png" alt="Una a minuscula, el logo de Alura"
 			/></a>
+			<h1 class="header__titulo">Encriptador de texto</h1>
 		</header>
 		<main>
 			<section>
@@ -19,12 +21,12 @@
 						class="campo__cifrar"
 						placeholder="Ingrese el mensaje a cifrar o descifrar aquí"></textarea>
 				</div>
+				<div class="campo__cifrar__validacion">
+					<p>⚠️Prohibido el uso de mayusculas y caracteres especiales</p>
+				</div>
 				<div class="campo__cifrar__botones">
 					<button class="boton__encriptar">Encriptar</button>
 					<button class="boton __desencriptar">Desencriptar</button>
-				</div>
-				<div class="campo__cifrar__validacion">
-					<p>⚠️Prohibido el uso de mayusculas y caracteres especiales</p>
 				</div>
 			</section>
 
@@ -51,5 +53,6 @@
 				</p>
 			</footer>
 		</footer>
+		<script src="./app.js"></script>
 	</body>
 </html>
