@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="./assets/Candado.jpeg" />
 		<title>Encriptador de texto</title>
-		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -24,9 +24,13 @@
 				<div class="campo__cifrar__validacion">
 					<p>⚠️Prohibido el uso de mayusculas y caracteres especiales</p>
 				</div>
-				<div class="campo__cifrar__botones">
-					<button class="boton__encriptar">Encriptar</button>
-					<button class="boton __desencriptar">Desencriptar</button>
+				<div class="campo__cifrar__btn">
+					<button onclick="encriptarMensaje ();" class="btn__encriptar">
+						Encriptar
+					</button>
+					<button onclick="desencriptarMensaje ();" class="btn __desencriptar">
+						Desencriptar
+					</button>
 				</div>
 			</section>
 
@@ -36,9 +40,12 @@
 						class="area__presentacion"
 						placeholder="Primero escriba el mensaje."
 						readonly></textarea>
+					<img src="./assets/Pensando.png" class="area__presentacion__img" />
 				</div>
 				<div class="area__presentacion__botones">
-					<button class="boton__copiar">Copiar</button>
+					<button onclick="copiarMensaje ();" class="boton__copiar">
+						Copiar
+					</button>
 				</div>
 			</section>
 		</main>

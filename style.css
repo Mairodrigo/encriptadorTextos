@@ -1,5 +1,14 @@
 *{
     padding: 0;
     margin: 0;
-    
+
+}
+.area__presentacion__img{
+    width: 25%;
+
+}
+
+.btn__desencriptar{
+    color: black;
+    background-color: aqua;
 }
