@@ -8,7 +8,21 @@ a {
 	color: black;
 }
 /*Estilos Generales*/
+body {
+	background-image: url(./assets/Encriptar.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Arial, sans-serif;
+	background-color: #cbf9c7;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
 header {
+
+	padding: 1%;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -19,12 +33,7 @@ header {
 	height: 48px;
 }
 
-body {
-	font-family: Arial, sans-serif;
-	background-color: #ecc7f9;
-	padding: 2rem;
-	box-sizing: border-box;
-}
+
 
 main {
 	max-width: 1200px;
@@ -34,7 +43,7 @@ main {
 
 footer {
 	width: 100%;
-	background-color: #732d91;
+	background-color: #4b912d;
 	padding: 0.5rem;
 	margin: 0;
 }
