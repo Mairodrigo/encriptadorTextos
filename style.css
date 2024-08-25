@@ -1,129 +1,215 @@
+/*Fuente a utilizar*/
+@import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap");
+
 /*Reseteo*/
 * {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
+	font-family: "Moderustic";
+}
+html {
+	font-size: 62.5%;
 }
 a {
 	text-decoration: none;
 	color: black;
 }
-/*Estilos Generales*/
+
+/*Variables*/
+:root {
+	--colorUno: #ffffff;
+	--colorDos: #ebd3f8;
+	--colorTres: #ad49e1;
+	--colorCuatro: #7a1cac;
+	--colorCinco: #2e073f;
+	--colorTextareas: #7a1cac10;
+}
+
+/*Estilos generales*/
 body {
-	background-image: url(./assets/Encriptar.jpeg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: Arial, sans-serif;
-	background-color: #cbf9c7;
-	padding: 2rem;
-	box-sizing: border-box;
+	background: linear-gradient(#ebd3f8, #ad49e1, #7a1cac, #2e073f);
 }
 
 header {
-
-	padding: 1%;
 	width: 100%;
+	margin-top: 0.5em;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 	align-items: center;
-	justify-content: space-between;
+	text-align: center;
+}
+h1 {
+	font-family: var(--fuenteTitulos);
+	font-weight: 500;
+	font-style: italic;
+	font-size: 4em;
+	color: var(--colorCinco);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3019607843);
 }
 
-.header__img {
-	width: 120px;
-	height: 48px;
+.header__logo {
+	width: 80%;
+	height: auto;
+	transition: all 1s;
 }
-
-
+.header__logo:hover {
+	width: 90%;
+	filter: saturate(180%);
+}
 
 main {
-	max-width: 1200px;
 	display: flex;
-	padding: 2rem;
-}
-
-footer {
-	width: 100%;
-	background-color: #4b912d;
-	padding: 0.5rem;
-	margin: 0;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+	margin: 2% 1% 1.5% 1%;
 }
 
 /*Textareas*/
-.campo__cifrar__container, .area__presentacion__container {
-	background-color: #d8bfd8; /* Fondo lila menos intenso */
-	border-radius: 0.5rem; /* Bordes redondeados */
-	padding: 1rem; /* Unidades relativas */
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.textareas {
+	text-align: center;
+	width: 100%;
+	height: 450px;
+}
+.campo__cifrar__container,
+.area__presentacion__container {
+	border: none;
+	padding: 1.5rem;
+	height: 100%;
+}
+.area__presentacion__container {
 }
 
 .campo__cifrar,
 .area__presentacion {
-	width: 50%; /* 100% del contenedor */
-	height: 300px; /* Altura fija, pero puedes ajustarla */
-	border: 1px solid #dcdcdc;
-	border-radius: 0.3rem; /* Bordes redondeados */
-	font-size: 1rem; /* Fuente relativa */
-	color: #333;
-	transition: border-color 0.3s;
+	background-color: #ffffffe1;
+	width: 90%;
+	height: 380px;
+	border: none;
+	border-radius: 0.5rem;
+	font-size: 1.8rem;
 }
 
-.campo__cifrar, .area__presentacion:focus {
-	outline: none;
-	border-color: #8e44ad; /* Borde violeta al enfocar */
+::placeholder {
+	color: #45135b80;
+	text-align: center;
 }
 
-/* Estilo de la Imagen */
-.area__presentacion__img {
-	max-width: 100%;
-	height: auto;
-	margin-top: 1rem; /* Espacio arriba de la imagen */
+.area__presentacion {
+	background-image: url(./assets/Pensando.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-size: contain;
 }
 
-/* Botones */
+.campo__cifrar__indicaciones {
+	color: var(--colorUno);
+}
+
+/* Botones*/
+.campo__cifrar__btn,
+.area__presentacion__btn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
 .btn__encriptar,
 .btn__desencriptar,
 .boton__copiar {
-	background-color: #8e44ad; /* Color violeta */
-	color: white;
+	width: 25%;
 	border: none;
-	border-radius: 2rem;
-	padding: 0.7rem 1.5rem;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: background-color 0.3s;
-	font-size: 1rem; /* Fuente relativa */
-	width: 50%; /* Botones ocupan el 100% del ancho */
+	font-size: 1.3rem;
+	padding: 0.5rem;
+	margin: 0.5rem;
+}
+
+.btn__encriptar,
+.boton__copiar {
+	background-color: var(--colorTres);
+	color: white;
+	border: var(--colorDos) solid;
+}
+
+.btn__desencriptar {
+	background-color: white;
+	color: var(--colorTres);
+	border: var(--colorDos) solid;
 }
 
 .btn__encriptar:hover,
 .btn__desencriptar:hover,
 .boton__copiar:hover {
-	background-color: #732d91;
+	color: whitesmoke;
+	background-color: #9163a4;
 	border-radius: 0%;
+	font-size: 1.5rem;
 }
 
-/* Media Queries */
+footer {
+	width: 100%;
+	margin: 0;
+	background-color: var(--colorTres);
+	padding: 0.8rem;
+	text-align: center;
+	font-size: 1.3rem;
+}
+
+/* Estilos pantallas pequeñas */
 @media (max-width: 768px) {
 	main {
 		flex-direction: column;
-		.area__presentacion {
-			height: 120px; /* Reducir altura en pantallas más pequeñas */
-		}
-
-		.btn__encriptar,
-		.btn__desencriptar,
-		.boton__copiar {
-			width: 100%; /* Botones a 100% de ancho en móviles */
-			margin-bottom: 10px;
-		}
-	}
-}
-
-@media (max-width: 480px) {
-	main {
-		padding: 10px; /* Reducir el padding en pantallas muy pequeñas */
 	}
 
 	.area__presentacion {
-		font-size: 14px; /* Disminuir el tamaño de la fuente en móviles pequeños */
+		height: 30%;
+		background-image: none;
+	}
+
+	.btn__encriptar,
+	.btn__desencriptar,
+	.boton__copiar {
+		width: 45%;
+		margin-bottom: 5px;
+	}
+}
+
+@media (max-width: 465px) {
+	header {
+		flex-direction: column;
+	}
+	main {
+		padding: 10px;
+		gap: 1rem;
+	}
+	.textareas {
+		height: fit-content;
+	}
+	.campo__cifrar__container {
+		height: fit-content;
+	}
+
+	.campo__cifrar {
+		height: 40%;
+	}
+
+	.area__presentacion {
+		font-size: 14px;
+	}
+	.btn__encriptar,
+	.btn__desencriptar,
+	.boton__copiar {
+		width: 100%;
+		margin-bottom: 5px;
+	}
+	footer{
+		padding: 0.3rem;
+		font-size: smaller;
 	}
 }

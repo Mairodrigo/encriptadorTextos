@@ -9,43 +9,50 @@
 	</head>
 	<body>
 		<header class="header">
-			<a href="www.aluracursos.com" target="_blank"
-				><img src="./assets/Logo.png" alt="Una a minuscula, el logo de Alura" class="header__logo"
-			/></a>
 			<h1 class="header__titulo">Encriptador de texto</h1>
+			<a href="https://www.aluracursos.com" target="_blank"
+				><img
+					src="./assets/Logo.png"
+					alt="Una a minuscula, el logo de Alura"
+					class="header__logo"
+			/></a>
 		</header>
 		<main>
-			<section>
+			<section class="textareas">
 				<div class="campo__cifrar__container">
 					<textarea
 						class="campo__cifrar"
+						cols="20"
+						rows="10"
 						placeholder="Ingrese el mensaje a cifrar o descifrar aquí"></textarea>
-				</div>
-				<div class="campo__cifrar__validacion">
-					<p>⚠️Prohibido el uso de mayusculas y caracteres especiales</p>
-				</div>
-				<div class="campo__cifrar__btn">
-					<button onclick="encriptarMensaje ();" class="btn__encriptar">
-						Encriptar
-					</button>
-					<button onclick="desencriptarMensaje ();" class="btn__desencriptar">
-						Desencriptar
-					</button>
+					<p class="campo__cifrar__indicaciones">
+						⚠️Prohibido el uso de mayusculas y caracteres especiales
+					</p>
+					<div class="campo__cifrar__btn">
+						<button onclick="encriptarMensaje ();" class="btn__encriptar">
+							Encriptar
+						</button>
+						<button onclick="desencriptarMensaje ();" class="btn__desencriptar">
+							Desencriptar
+						</button>
+					</div>
 				</div>
 			</section>
 
-			<section>
+			<section class="textareas">
 				<div class="area__presentacion__container">
 					<textarea
 						class="area__presentacion"
+						cols="20"
+						rows="10"
 						placeholder="Aquí verá el resultado."
 						readonly></textarea>
-					<img src="./assets/Pensando.png" class="area__presentacion__img" />
-				</div>
-				<div class="area__presentacion__botones">
-					<button onclick="copiarMensaje ();" class="boton__copiar">
-						Copiar
-					</button>
+	
+					<div class="area__presentacion__btn">
+						<button onclick="copiarMensaje ();" class="boton__copiar">
+							Copiar
+						</button>
+					</div>
 				</div>
 			</section>
 		</main>
