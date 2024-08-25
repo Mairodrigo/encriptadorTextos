@@ -79,8 +79,6 @@ main {
 	padding: 1.5rem;
 	height: 100%;
 }
-.area__presentacion__container {
-}
 
 .campo__cifrar,
 .area__presentacion {
@@ -208,7 +206,7 @@ footer {
 		width: 100%;
 		margin-bottom: 5px;
 	}
-	footer{
+	footer {
 		padding: 0.3rem;
 		font-size: smaller;
 	}
