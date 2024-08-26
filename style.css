@@ -100,6 +100,7 @@ main {
 	background-repeat: no-repeat;
 	background-position: bottom;
 	background-size: contain;
+	resize: none;
 }
 
 .campo__cifrar__indicaciones {
@@ -165,6 +166,13 @@ footer {
 		flex-direction: column;
 	}
 
+	.textareas{
+		height: fit-content;
+	}
+
+	.area__presentacion__container{
+		height: fit-content;
+	}
 	.area__presentacion {
 		height: 30%;
 		background-image: none;
@@ -186,15 +194,13 @@ footer {
 		padding: 10px;
 		gap: 1rem;
 	}
-	.textareas {
-		height: fit-content;
-	}
 	.campo__cifrar__container {
 		height: fit-content;
 	}
 
 	.campo__cifrar {
 		height: 40%;
+		font-size: 14px;
 	}
 
 	.area__presentacion {

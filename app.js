@@ -1,7 +1,7 @@
 // VARIABLES
 let campoCifrar = document.querySelector(".campo__cifrar");
 let areaPresentacion = document.querySelector(".area__presentacion");
-let imgPresentacion = document.querySelector(".area__presentacion__img");
+let imgPresentacion = document.querySelector;
 
 // FUNCIONES
 function encriptarMensaje() {
@@ -29,15 +29,14 @@ function desencriptarMensaje() {
 }
 
 function mostrarResultado(mensaje) {
-	areaPresentacion.value = mensaje; // Mostrar el mensaje en el área de presentación
-	imgPresentacion.style.display = "none"; // Ocultar la imagen si hay texto en el área de presentación
+	areaPresentacion.value = mensaje;
 }
 
 function copiarMensaje() {
 	navigator.clipboard
-		.writeText(areaPresentacion.value) // Copiar el texto al portapapeles
+		.writeText(areaPresentacion.value) 
 		.then(() => {
-			alert("Mensaje copiado al portapapeles!"); // Mensaje de éxito
+			alert("Mensaje copiado al portapapeles!"); 
 		})
 		.catch((err) => {
 			console.error("Error al copiar: ", err);
